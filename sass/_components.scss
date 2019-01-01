@@ -294,11 +294,20 @@
 
   &:hover {
     color: var(--color-gray-dark-1);
+
+    & span {
+      margin-left: 0.8rem;
+    }
   }
 
   &:focus {
     outline: none;
     animation: pulsate 1s infinite;
+  }
+
+  & span {
+    margin-left: 3px;
+    transition: margin-left 0.2s;
   }
 }
 
@@ -387,5 +396,72 @@
     &:not(:last-of-type) {
       margin-right: -1.5rem;
     }
+  }
+}
+
+// *************************************************
+// REVIEWS
+
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  &__text {
+    padding-bottom: 2rem;
+    z-index: 10;
+    position: relative;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+  }
+
+  &__user-box {
+    margin-right: auto;
+    margin-left: 1.5rem;
+  }
+
+  &__user-name {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--color-gray-dark-1);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  &__user-date {
+    font-size: 1rem;
+    color: var(--color-gray-dark-3);
+  }
+
+  &__rating {
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    font-weight: 300;
+  }
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    line-height: 1;
+    font-size: 20rem;
+    color: var(--color-gray-light-2);
+    font-family: sans-serif;
+    z-index: 1;
   }
 }
