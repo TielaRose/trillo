@@ -18,6 +18,13 @@
   --line-light-gray: 1px solid var(--color-gray-light-2);
 }
 
+$bp-1200: 75em; // 1200px
+$bp-1100: 68.75em; // 1100px
+$bp-950: 59.375em; // 950px
+$bp-600: 37.5em; // 600px
+$bp-500: 31.25em; // 500px
+$bp-360: 22.5em; // 360px
+
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +39,10 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1 rem = 10px;
+
+  @media only screen and (max-width: $bp-1100) {
+    font-size: 50%; // 1 rem = 8px;
+  }
 }
 
 body {
